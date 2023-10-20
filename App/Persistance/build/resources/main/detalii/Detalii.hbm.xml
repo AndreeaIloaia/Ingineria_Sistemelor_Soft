@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="domain.Detalii"
+           table="DetaliiComanda">
+        <id name="id" column="ID">
+        </id>
+        <property
+                name="id_comanda"
+                column="ID_comanda"/>
+        <property
+                name="id_produs"
+                column="ID_produs"/>
+        <property name="cantitate"
+                  column="Cantitate"/>
+    </class>
+</hibernate-mapping>

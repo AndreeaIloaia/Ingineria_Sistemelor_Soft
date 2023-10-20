@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="lab.lab.main" target="1.8" />
+      <module name="lab.lab.test" target="1.8" />
+      <module name="lab.Networking.main" target="1.8" />
+      <module name="lab.Networking.test" target="1.8" />
+      <module name="MeciDomain.lab.lab.main" target="1.8" />
+      <module name="MeciDomain.lab.lab.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+ ">
+
+    <util:properties id="jdbcProps1">
+        <prop key="jdbc.driver">org.sqlite.JDBC</prop>
+        <prop key="jdbc.url">jdbc:sqlite:C:/Users/Andreea/Desktop/Facultate/Anul_II/Sem2/ISS/Laburi/Faza I/teste/Lab5/Lab/Agentie.db
+        </prop>
+    </util:properties>
+
+    <util:properties id="jdbcProps" location="classpath:bd.config"/>
+
+    <bean id="val1" class="validator.ValidatorAdmin"/>
+    <bean id="val2" class="validator.ValidatorProdus"/>
+
+    <bean id="repo1" class="jdbc.RepoAdmin">
+        <property name="validatorAdmin" ref="val1"/>
+    </bean>
+
+    <bean id="repo2" class="jdbc.RepoProdus">
+        <property name="validatorProdus" ref="val2"/>
+    </bean>
+
+    <bean id="repo3" class="jdbc.RepoAgent">
+    </bean>
+
+    <bean id="repo4" class="jdbc.RepoComanda">
+    </bean>
+
+    <bean id="repo5" class="jdbc.RepoDetalii">
+    </bean>
+
+</beans>

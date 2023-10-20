@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'lab'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':Domain')
+    compile project(':Services')
+    compile project(':Persistance')
+    compile group: 'org.springframework', name: 'spring-context', version: '5.2.4.RELEASE'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
