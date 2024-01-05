@@ -47,7 +47,6 @@ public class MainController {
         dialogStage.setTitle("Login Admin");
         dialogStage.initModality(Modality.WINDOW_MODAL);
         Scene scene = new Scene(root);
-        //dialogStage.setWidth(500);
         dialogStage.setScene(scene);
 
         loginController = loader.getController();

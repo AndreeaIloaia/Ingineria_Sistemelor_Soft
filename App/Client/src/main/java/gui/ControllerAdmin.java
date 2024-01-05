@@ -67,7 +67,6 @@ public class ControllerAdmin extends UnicastRemoteObject implements IObserver, S
                     int pret = Integer.parseInt(pret_field);
                     int cantitate = Integer.parseInt(cant_field);
 
-                    //int temp_id = selected.getId();
                     //daca nu selecteaza nicio entitate, sa trimit id-ul din field
                     if (server.updateProdus(selected.getId(), id, denumire, pret, cantitate)) {
                         try {
@@ -104,7 +103,6 @@ public class ControllerAdmin extends UnicastRemoteObject implements IObserver, S
                         errorWindow("Produsul exista deja");
                     }
                     clearFileds();
-                    //updateProduse(new Produs(id, denumire, pret, cantitate));
                 } catch (Exception se) {
                     errorWindow(se.getMessage());
                 }
@@ -120,7 +118,6 @@ public class ControllerAdmin extends UnicastRemoteObject implements IObserver, S
                     if(!ok){
                         errorWindow("Nu exista acest produs");
                     }
-                    //updateProduse(new Produs(produs.getId(),"",0,0));
                     clearFileds();
                 } catch (Exception se) {
                     errorWindow(se.getMessage());
